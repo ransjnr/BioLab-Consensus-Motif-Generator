@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import 'bootstrap/dist/css/bootstrap.css';
+import 'react-bootstrap';
 import App from "./App";
 
 const rootElement = document.getElementById("root");

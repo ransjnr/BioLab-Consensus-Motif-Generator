@@ -7,15 +7,17 @@ function App() {
 
   const analyzeMotifs = async () => {
     try {
-      const motifsArray = motifs.split('\n').filter((motif) => motif.trim() !== '');
-      const response = await fetch("api/analyze", {
+      const motifsArray = motifs
+        .split("\n")
+        .filter((motif) => motif.trim() !== "");
+      const response = await fetch("http://localhost:5000/api/analyze", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify({ motifs: motifsArray })
+        body: JSON.stringify({ motifs: motifsArray }),
       });
-      
+
       const data = await response.json();
       setResults(data);
     } catch (error) {
