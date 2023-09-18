@@ -7,15 +7,16 @@ function App() {
 
   const analyzeMotifs = async () => {
     try {
-      const motifsArray = motifs
-        .split("\n")
-        .filter((motif) => motif.trim() !== "");
+      const motifArrayRaw = motifs
+      .replace(/[^A-Za-z0-9,]+/g, "")
+      .split(",")
+      .map((item) => item.trim());
       const response = await fetch("http://localhost:5000/api/analyze", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ motifs: motifsArray }),
+        body: JSON.stringify({ motifs: motifArrayRaw }),
       });
 
       const data = await response.json();
