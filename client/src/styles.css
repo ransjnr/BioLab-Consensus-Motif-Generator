@@ -35,8 +35,7 @@
   border-bottom: .25rem solid transparent;
 }
 
-.nav-masthead .nav-link:hover,
-.nav-masthead .nav-link:focus {
+.nav-masthead .nav-link:hover{
   border-bottom-color: rgba(255, 0, 0, 0.25);
 }
 
@@ -44,11 +43,13 @@
   margin-left: 1rem;
 }
 
-.nav-masthead .active {
-  color: #0e067e;
-  border-bottom-color: #580c0c;
-}
+.navbar-brand h1{
+  color: #ffffff;
 
+}
+.nav-link{
+  color: #ffffff;
+}
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
@@ -116,7 +117,4 @@
 
 .bd-mode-toggle .dropdown-menu .active .bi {
   display: block !important;
-}
-.navbar{
-  background-color: rgb(241, 241, 206);
 }
