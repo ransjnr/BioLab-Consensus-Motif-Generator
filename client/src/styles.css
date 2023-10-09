@@ -118,3 +118,11 @@
 .bd-mode-toggle .dropdown-menu .active .bi {
   display: block !important;
 }
+.copy-icon {
+  cursor: pointer;
+  margin-left: 10px;
+}
+.badge {
+  font-size: 25%;
+  margin-left: 2px; /* Adjust the margin as needed */
+}
