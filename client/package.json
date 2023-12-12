@@ -1,40 +1,16 @@
 {
-  "name": "frontend",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@mui/icons-material": "^5.14.9",
-    "@mui/material": "^5.14.11",
-    "@mui/system": "^5.14.11",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "bootstrap": "^5.3.2",
-    "bootstrap-icons": "^1.11.1",
-    "mdb-react-ui-kit": "^6.3.0",
-    "mui": "^0.0.1",
-    "react": "^18.2.0",
-    "react-bootstrap": "^2.9.0",
-    "react-dom": "^18.2.0",
-    "react-responsive-carousel": "^3.2.23",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+  "name": "client",
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "react-scripts start",
+    "build": "react-scripts build"
   },
-  "engines": {
-    "node": "8.1.1",
-    "npm": "5.0.3"
-    },
-    "scripts": {
-    "start": "node index.js",
-    "heroku-postbuild": "npm run build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -46,5 +22,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "mdb-react-ui-kit": "^7.0.0",
+    "react-scripts": "^5.0.1"
   }
 }
