@@ -6,7 +6,17 @@ import sideImage from "./component/image1.jpg";
 import Footer from "./scene/footer";
 import SignIn from "./scene/signIn";
 import "bootstrap/dist/css/bootstrap.css";
-import { MDBBadge,MDBFile, MDBCard, MDBBtn, MDBCardText, MDBCardTitle, MDBCardBody,MDBCardImage,MDBRipple } from "mdb-react-ui-kit";
+import {
+  MDBBadge,
+  MDBFile,
+  MDBCard,
+  MDBBtn,
+  MDBCardText,
+  MDBCardTitle,
+  MDBCardBody,
+  MDBCardImage,
+  MDBRipple,
+} from "mdb-react-ui-kit";
 
 function copyToClipboard(id) {
   const element = document.getElementById(id);
@@ -23,8 +33,8 @@ function copyToClipboard(id) {
 
 function App() {
   const [predictedTherapies, setPredictedTherapies] = useState([]);
-const [geneticInsights, setGeneticInsights] = useState("");
-const [treatmentModels, setTreatmentModels] = useState("");
+  const [geneticInsights, setGeneticInsights] = useState("");
+  const [treatmentModels, setTreatmentModels] = useState("");
   const [sessionMotifs, setSessionMotifs] = useState("");
   const [sessionResults, setSessionResults] = useState(null);
   const [showTherapiesModal, setShowTherapiesModal] = useState(false);
@@ -150,15 +160,15 @@ const [treatmentModels, setTreatmentModels] = useState("");
             </div>
           </div>
         )}
-      <div style={{ textAlign: "center" }}>
-        <button
-          type="button"
-          className="btn btn-secondary mt-5"
-          onClick={() => setCurrentPhase("phase2")}
-        >
-          Go to Phase II
-        </button>
-      </div>
+        <div style={{ textAlign: "center" }}>
+          <button
+            type="button"
+            className="btn btn-secondary mt-5"
+            onClick={() => setCurrentPhase("phase2")}
+          >
+            Go to Phase II
+          </button>
+        </div>
       </div>
     );
   } else if (currentPhase === "phase2") {
@@ -166,7 +176,7 @@ const [treatmentModels, setTreatmentModels] = useState("");
       <div className="mt-5">
         {/* Phase II content goes here */}
         <p>This is Phase II content.</p>
-  
+
         <div className="row">
           <div className="col-md-4">
             <div className="form-group">
@@ -200,7 +210,8 @@ const [treatmentModels, setTreatmentModels] = useState("");
                 className="btn btn-primary mt-3"
                 onClick={() => {
                   // Implement logic to provide genetic insights based on sessionResults
-                  const geneticInsights = "Replace with actual genetic insights";
+                  const geneticInsights =
+                    "Replace with actual genetic insights";
                   setGeneticInsights(geneticInsights);
                 }}
               >
@@ -221,7 +232,8 @@ const [treatmentModels, setTreatmentModels] = useState("");
                 className="btn btn-primary mt-3"
                 onClick={() => {
                   // Implement logic to describe treatment models based on sessionResults
-                  const treatmentModels = "Replace with actual treatment models description";
+                  const treatmentModels =
+                    "Replace with actual treatment models description";
                   setTreatmentModels(treatmentModels);
                 }}
               >
@@ -237,76 +249,116 @@ const [treatmentModels, setTreatmentModels] = useState("");
           </div>
         </div>
         <div className="text-center">
-        <button
-          type="button"
-          className="btn btn-secondary mt-3"
-          onClick={() => setCurrentPhase("phase1")}
-        >
-          Back to Phase I
-        </button>
-      </div>
-            {/* Cards section */}
-            <div className="row mt-5">
-        <div className="col-md-4">
-          <MDBCard>
-            {/* Card content for Card 1 */}
-            <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-        <MDBCardImage src='https://mdbootstrap.com/img/new/standard/nature/111.webp' fluid alt='...' />
-        <a>
-          <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
-        </a>
-      </MDBRipple>
-      <MDBCardBody>
-        <MDBCardTitle>Card title</MDBCardTitle>
-        <MDBCardText>
-          Some quick example text to build on the card title and make up the bulk of the card's content.
-        </MDBCardText>
-        <MDBBtn className="btn-secondary" href='#'>Button</MDBBtn>
-      </MDBCardBody>
-          </MDBCard>
+          <button
+            type="button"
+            className="btn btn-secondary mt-3"
+            onClick={() => setCurrentPhase("phase1")}
+          >
+            Back to Phase I
+          </button>
         </div>
-        <div className="col-md-4">
-          <MDBCard>
-            {/* Card content for Card 2 */}
-            <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-        <MDBCardImage src='https://mdbootstrap.com/img/new/standard/nature/111.webp' fluid alt='...' />
-        <a>
-          <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
-        </a>
-      </MDBRipple>
-      <MDBCardBody>
-        <MDBCardTitle>Card title</MDBCardTitle>
-        <MDBCardText>
-          Some quick example text to build on the card title and make up the bulk of the card's content.
-        </MDBCardText>
-        <MDBBtn className="btn-secondary" href='#'>Button</MDBBtn>
-      </MDBCardBody>
-          </MDBCard>
+        {/* Cards section */}
+        <div className="row mt-5">
+          <div className="col-md-4">
+            <MDBCard>
+              {/* Card content for Card 1 */}
+              <MDBRipple
+                rippleColor="light"
+                rippleTag="div"
+                className="bg-image hover-overlay"
+              >
+                <MDBCardImage
+                  src="https://mdbootstrap.com/img/new/standard/nature/111.webp"
+                  fluid
+                  alt="..."
+                />
+                <a>
+                  <div
+                    className="mask"
+                    style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
+                  ></div>
+                </a>
+              </MDBRipple>
+              <MDBCardBody>
+                <MDBCardTitle>Card title</MDBCardTitle>
+                <MDBCardText>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </MDBCardText>
+                <MDBBtn className="btn-secondary" href="#">
+                  Button
+                </MDBBtn>
+              </MDBCardBody>
+            </MDBCard>
+          </div>
+          <div className="col-md-4">
+            <MDBCard>
+              {/* Card content for Card 2 */}
+              <MDBRipple
+                rippleColor="light"
+                rippleTag="div"
+                className="bg-image hover-overlay"
+              >
+                <MDBCardImage
+                  src="https://mdbootstrap.com/img/new/standard/nature/111.webp"
+                  fluid
+                  alt="..."
+                />
+                <a>
+                  <div
+                    className="mask"
+                    style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
+                  ></div>
+                </a>
+              </MDBRipple>
+              <MDBCardBody>
+                <MDBCardTitle>Card title</MDBCardTitle>
+                <MDBCardText>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </MDBCardText>
+                <MDBBtn className="btn-secondary" href="#">
+                  Button
+                </MDBBtn>
+              </MDBCardBody>
+            </MDBCard>
+          </div>
+          <div className="col-md-4">
+            <MDBCard>
+              {/* Card content for Card 3 */}
+              <MDBRipple
+                rippleColor="light"
+                rippleTag="div"
+                className="bg-image hover-overlay"
+              >
+                <MDBCardImage
+                  src="https://mdbootstrap.com/img/new/standard/nature/111.webp"
+                  fluid
+                  alt="..."
+                />
+                <a>
+                  <div
+                    className="mask"
+                    style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
+                  ></div>
+                </a>
+              </MDBRipple>
+              <MDBCardBody>
+                <MDBCardTitle>Card title</MDBCardTitle>
+                <MDBCardText>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </MDBCardText>
+                <MDBBtn className="btn-secondary" href="#">
+                  Button
+                </MDBBtn>
+              </MDBCardBody>
+            </MDBCard>
+          </div>
         </div>
-        <div className="col-md-4">
-          <MDBCard>
-            {/* Card content for Card 3 */}
-            <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-        <MDBCardImage src='https://mdbootstrap.com/img/new/standard/nature/111.webp' fluid alt='...' />
-        <a>
-          <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
-        </a>
-      </MDBRipple>
-      <MDBCardBody>
-        <MDBCardTitle>Card title</MDBCardTitle>
-        <MDBCardText>
-          Some quick example text to build on the card title and make up the bulk of the card's content.
-        </MDBCardText>
-        <MDBBtn className="btn-secondary" href='#'>Button</MDBBtn>
-      </MDBCardBody>
-          </MDBCard>
-        </div>
-      </div>
       </div>
     );
   }
-  
-  
 
   return (
     <div
