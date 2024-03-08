@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import "./styles.css";
 import settingsIcon from "./component/settings-icon.svg";
 import accountIcon from "./component/account-icon.svg";
-import sideImage from "./component/image1.jpg";
+import IMAGE1 from "./component/image-1.jpg";
+import IMAGE2 from "./component/image-2.jpg";
+import IMAGE3 from "./component/image-1.jpg";
 import Footer from "./scene/footer";
 import SignIn from "./scene/signIn";
 import "bootstrap/dist/css/bootstrap.css";
@@ -268,7 +270,7 @@ function App() {
                 className="bg-image hover-overlay"
               >
                 <MDBCardImage
-                  src="https://mdbootstrap.com/img/new/standard/nature/111.webp"
+                  src={IMAGE1}
                   fluid
                   alt="..."
                 />
@@ -280,13 +282,12 @@ function App() {
                 </a>
               </MDBRipple>
               <MDBCardBody>
-                <MDBCardTitle>Card title</MDBCardTitle>
+                <MDBCardTitle>5 December 2023 | Global strategy</MDBCardTitle>
                 <MDBCardText>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                Global genomic surveillance strategy for pathogens with pandemic and epidemic potential 2022–2032: progress report on the first year of implementation
                 </MDBCardText>
-                <MDBBtn className="btn-secondary" href="#">
-                  Button
+                <MDBBtn className="btn-secondary" target="blank" href="https://who.int/publications/i/item/9789240084773">
+                  Read
                 </MDBBtn>
               </MDBCardBody>
             </MDBCard>
@@ -300,7 +301,7 @@ function App() {
                 className="bg-image hover-overlay"
               >
                 <MDBCardImage
-                  src="https://mdbootstrap.com/img/new/standard/nature/111.webp"
+                  src={IMAGE2}
                   fluid
                   alt="..."
                 />
@@ -312,13 +313,12 @@ function App() {
                 </a>
               </MDBRipple>
               <MDBCardBody>
-                <MDBCardTitle>Card title</MDBCardTitle>
+                <MDBCardTitle>12 July 2022 | Report</MDBCardTitle>
                 <MDBCardText>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                Accelerating access to genomics for global health: promotion, implementation, collaboration, and ethical, legal, and social issues: a report of the WHO Science Council
                 </MDBCardText>
-                <MDBBtn className="btn-secondary" href="#">
-                  Button
+                <MDBBtn className="btn-secondary" href="https://www.who.int/publications/i/item/9789240052857">
+                  Read
                 </MDBBtn>
               </MDBCardBody>
             </MDBCard>
